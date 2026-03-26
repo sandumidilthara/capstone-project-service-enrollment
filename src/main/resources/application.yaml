@@ -3,16 +3,9 @@ spring:
     name: enrollment-service
 
   config:
-    import: "optional:configserver:"
+    import: "configserver:"
 
   cloud:
     config:
-      uri: http://localhost:9000
+      uri: http://config.platform:9000
 
-eureka:
-    instance:
-      prefer-ip-address: true
-      ip-address: 127.0.0.1
-    client:
-      service-url:
-        defaultZone: http://localhost:9001/eureka/
